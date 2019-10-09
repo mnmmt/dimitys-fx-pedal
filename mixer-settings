@@ -1,0 +1,6 @@
+#!/bin/sh
+
+card=`arecord -l | grep -oE "card [0-9]+" | cut -d" " -f2`
+mix="amixer -c$card -q set"
+$mix "PCM Capture Source" "Mic"
+$mix "Mic" 95% mute

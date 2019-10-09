@@ -1,0 +1,3 @@
+crontab -e
+
+@reboot cd /home/pi/rpi-vocal-fx-unit && ./launch
