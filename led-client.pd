@@ -1,4 +1,4 @@
-#N canvas 364 390 450 300 10;
+#N canvas 361 372 450 348 10;
 #X obj 223 256 netsend -u;
 #X msg 223 194 connect localhost 9999;
 #X obj 15 71 list prepend send;
@@ -6,6 +6,8 @@
 #X obj 223 168 loadbang;
 #X obj 15 19 inlet;
 #X obj 15 41 t a b;
+#X obj 223 285 outlet;
+#X connect 0 0 7 0;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
 #X connect 3 0 0 0;

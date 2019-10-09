@@ -1,4 +1,4 @@
-#N canvas 550 98 702 793 10;
+#N canvas 547 80 702 793 10;
 #X declare -path s-abstractions/trunk;
 #X obj 449 13 declare -path s-abstractions/trunk;
 #X obj 572 42 s-midimonitor;
@@ -7,7 +7,7 @@
 ;
 #X obj 123 10 ctlin 0 2;
 #X obj 126 36 hsl 128 32 0 127 0 0 empty empty empty -2 -8 0 10 -99865
--1 -1 3900 1;
+-1 -1 0 1;
 #X obj 123 74 s knob;
 #N canvas 76 495 450 537 delay 0;
 #X obj 29 14 adc~;
@@ -1458,7 +1458,7 @@
 #X obj 413 305 led-client;
 #X obj 413 262 r effect;
 #X text 411 232 light up LED;
-#N canvas 2 47 450 300 led-pins 0;
+#N canvas 2 50 450 300 led-pins 0;
 #X obj 11 9 inlet;
 #X obj 11 119 until;
 #X msg 11 97 3;
@@ -1571,6 +1571,10 @@
 #X obj 288 284 == 3;
 #X obj 114 387 r effect;
 #X obj 114 409 expr $f1 > 0 && $f1 < 3;
+#X obj 413 421 s effect;
+#X text 481 419 <- foot pedal;
+#X obj 413 373 netreceive -u 9998;
+#X obj 413 395 route 27;
 #X connect 2 0 3 0;
 #X connect 3 0 12 0;
 #X connect 4 0 5 0;
@@ -1600,3 +1604,5 @@
 #X connect 33 0 24 0;
 #X connect 34 0 35 0;
 #X connect 35 0 32 0;
+#X connect 38 0 39 0;
+#X connect 39 0 36 0;
