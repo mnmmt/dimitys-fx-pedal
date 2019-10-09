@@ -1,3 +1,8 @@
 #!/bin/sh
 
-rsync -avz pi@192.168.1.37:~/rpi-vocal-fx-unit/ .
+if [ "$1" = "" ]
+then
+  echo "`basename $0` IP"
+else
+  rsync -avz pi@${1}:~/rpi-vocal-fx-unit/ .
+fi
