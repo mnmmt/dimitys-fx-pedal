@@ -1,0 +1,18 @@
+audioapi: 1
+noaudioin: False
+audioindev1: 2 2
+audioindevname1: USB Sound Device (hardware)
+noaudioout: False
+audiooutdev1: 2 6
+audiooutdevname1: USB Sound Device (hardware)
+audiobuf: 25
+rate: 44100
+callback: 0
+blocksize: 64
+nomidiin: False
+npath: 0
+standardpath: 1
+verbose: 0
+nloadlib: 0
+defeatrt: 0
+flags: 
